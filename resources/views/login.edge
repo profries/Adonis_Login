@@ -6,15 +6,21 @@
 </head>
 <body>
   <h1>Login</h1>
-  <form>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" name="fname"><br><br>
+  <form action="/auth" method="POST">
+  {{ csrfField() }}
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
   
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" name="lname"><br><br>
+    <label for="senha">Senha:</label>
+    <input type="text" id="senha" name="senha"><br><br>
   
     <input type="submit" value="Submit">
-  
+    @if(old('notification'))
+    <p style="color:red">
+        {{ old('notification') }}
+    </p>
+    @endif
+
   </form>
   
   

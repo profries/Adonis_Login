@@ -18,3 +18,6 @@ const Route = use('Route')
 
 //Route.on('/').render('login')
 Route.get("/", "LoginController.login");
+Route.post("/auth", "LoginController.autenticar");
+Route.get("/bemvindo", "LoginController.bemVindo");
+

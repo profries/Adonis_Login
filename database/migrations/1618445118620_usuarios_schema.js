@@ -11,6 +11,7 @@ class UsuariosSchema extends Schema {
       table.string('nome', 254).notNullable().unique()
       table.string('senha', 60).notNullable()
     })
+
   }
 
   down () {
